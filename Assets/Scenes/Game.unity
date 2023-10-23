@@ -375,7 +375,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 100506674}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 484400102}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &100506674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,6 +1108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1748305786}
+  mainMenu: {fileID: 1210878373}
   gameOverWave: {fileID: 1537196513}
   inGameWave: {fileID: 1666613568}
   zombiePrefab: {fileID: 492198717236431589, guid: ea4e309dbf521ba4da864b6faaa3caf2,
@@ -2672,7 +2685,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1687747509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 484400102}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1687747509
 MonoBehaviour:
   m_ObjectHideFlags: 0

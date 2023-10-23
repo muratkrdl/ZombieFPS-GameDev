@@ -9,18 +9,8 @@ public class WeaponManager : MonoBehaviour
     [SerializeField] float damage = 25f;
     [SerializeField] Animator playerAnimator;
     
-    void Start()
-    {
-        
-    }
-    
     void Update()
     {
-        if(playerAnimator.GetBool("isShooting"))
-        {
-            playerAnimator.SetBool("isShooting", false);
-        }
-
         if(Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -29,7 +19,7 @@ public class WeaponManager : MonoBehaviour
 
     void Shoot()
     {
-        playerAnimator.SetBool("isShooting", true);
+        playerAnimator.SetTrigger("Shoot");
 
         RaycastHit hit;
 

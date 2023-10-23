@@ -12,23 +12,28 @@ public class EnemyManager : MonoBehaviour
     public GameManager gameManager;
 
     Animator animator;
+    NavMeshAgent navMeshAgent;
 
     void Awake() 
     {
         animator = GetComponent<Animator>();
-        
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        GetComponent<NavMeshAgent>().destination = player.transform.position;
-        if(GetComponent<NavMeshAgent>().velocity.magnitude > 1)
+        if(!navMeshAgent.enabled)
+            return;
+            
+        navMeshAgent.destination = player.transform.position;
+
+        if(navMeshAgent.velocity.magnitude > 1)
         {
             animator.SetBool("isRunning", true);
         }
@@ -43,8 +48,14 @@ public class EnemyManager : MonoBehaviour
         if(other.gameObject == player)
         {
             player.GetComponent<PlayerManager>().Hit(damage);
+            animator.SetTrigger("Hit");
             Debug.Log("hitted plater!");
-        }    
+        }
+    }
+
+    public void HitAnimEvent()
+    {
+        
     }
 
     public void Hit(float damage)
@@ -53,8 +64,10 @@ public class EnemyManager : MonoBehaviour
         if(health <= 0)
         {
             gameManager.enemiesAlive--;
-            //Died phase
-            Destroy(gameObject);
+            animator.SetTrigger("Dead"); 
+            navMeshAgent.enabled = false;
+            GetComponent<Collider>().enabled = false;      
+            Destroy(gameObject,5);
         }
     }
 

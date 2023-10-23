@@ -8,6 +8,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] Image gameOver;
+    [SerializeField] Image mainMenu;
     [SerializeField] TextMeshProUGUI gameOverWave;
 
     [SerializeField] TextMeshProUGUI inGameWave;
@@ -67,20 +68,21 @@ public class GameManager : MonoBehaviour
 
     public void MainMenu()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Quit()
     {
         Debug.Log("Quitttt");
-
         //Application.Quit();
     }
 
     public void Play()
     {
-        
+        Time.timeScale = 1;
+        mainMenu.gameObject.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 }

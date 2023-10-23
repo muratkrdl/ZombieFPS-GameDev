@@ -15,12 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] LayerMask groundMask;
 
     [SerializeField] float gravity = -9.81f;
+    
     Vector3 velocity;
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
