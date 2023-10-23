@@ -3,9 +3,15 @@
 
 Our goal in the game is to survive
 
-You earn points when you cross the road and you return to the starting point
+zombies are coming in waves and they want to kill us
 
-If the car hits you, you lose all your points and the game starts from the beginning
+We have to kill them to survive
+
+They only die when you hit their heads because they are zombies
+
+We lose 20 lives every time they hit us
+
+If we run out of lives, the game ends too
 
 
 # Gameplay
