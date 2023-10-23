@@ -17,6 +17,7 @@ If we run out of lives, the game ends too
 # Gameplay
 
 
+
 <img src="[gifi koy](https://github.com/muratkrdl/ZombieFPS-GameDev/blob/main/GameplayPicture.png)" width="auto">
 
 
