@@ -1,17 +1,17 @@
 
 # ZombieFps
 
-Our goal in the game is to survive
+The goal in the game is to survive
 
-zombies are coming in waves and they want to kill us
+zombies are coming in waves and they want to kill player
 
-We have to kill them to survive
+Player has to kill them to survive
 
 They only die when you hit their heads because they are zombies
 
-We lose 20 lives every time they hit us
+Player loses 20 lives every time they hit us
 
-If we run out of lives, the game ends too
+If player run out of lives, the game ends too
 
 
 # Gameplay
